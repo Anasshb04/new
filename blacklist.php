@@ -1,5 +1,4 @@
 <?php
-
 $blacklist=array(
     array(
         'name'=> 'Adam',
@@ -64,35 +63,14 @@ $blacklist1=array(
         'id'=> 114
     )
 
-);
-function id(){
-    for($id=110;$id<130;$id++){
-        if($id>=111 && $id<115){
-            echo $id.("مجرم تم القبض عليه");
-            echo "<br>";
-        }
-        else if($id>=123 && $id<=128){
-            echo $id.("مجرم  لم يتم القبض عليه");
-            echo "<br>";
-        }
-        else{
-            echo $id.('ليس مجرم');
-            echo "<br>";
-        }
-    }
+    );
+foreach($blacklist as $id=> $number){
+    echo $number['id']."مجرم لم يتم القبض عليه";
+    echo "<br>";
 }
-id();
 
-
-
-
-
-
-
-
-
-
-
-
-
+foreach($blacklist1 as $id=> $number){
+    echo $number['id']."مجرم تم القبض عليه";
+    echo "<br>";
+}
 ?>
